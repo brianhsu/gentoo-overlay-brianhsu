@@ -71,6 +71,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-distribution \
+		--disable-xml \
 	    $(use_enable xfce) \
 		$(use_enable appindicator indicator) \
 		$(use_enable doc manual) \
