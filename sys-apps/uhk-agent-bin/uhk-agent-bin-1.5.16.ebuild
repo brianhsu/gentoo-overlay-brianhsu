@@ -14,6 +14,8 @@ DEPEND="sys-fs/fuse:0"
 
 RDEPEND="sys-fs/fuse:0"
 
+QA_PREBUILT="/opt/uhk-agent-bin/bin/UHK.Agent.AppImage"
+
 src_unpack() {
    mkdir uhk-agent-bin-${PV} || die
    cd uhk-agent-bin-${PV} || die
