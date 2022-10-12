@@ -9,6 +9,7 @@ LICENSE="Agent License"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND="sys-fs/fuse:0"
 

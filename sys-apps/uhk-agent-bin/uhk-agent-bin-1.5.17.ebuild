@@ -14,6 +14,8 @@ DEPEND="sys-fs/fuse:0"
 
 RDEPEND="sys-fs/fuse:0"
 
+RESTRICT="strip"
+
 QA_PREBUILT="/opt/uhk-agent-bin/bin/UHK.Agent.AppImage"
 
 src_unpack() {
