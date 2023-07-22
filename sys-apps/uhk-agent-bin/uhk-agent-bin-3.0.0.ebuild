@@ -9,27 +9,30 @@ LICENSE="Agent License"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-RESTRICT="strip"
 
 DEPEND="sys-fs/fuse:0"
 
 RDEPEND="sys-fs/fuse:0"
 
+RESTRICT="strip"
+
 QA_PREBUILT="/opt/uhk-agent-bin/bin/UHK.Agent.AppImage"
 
 src_unpack() {
+
+   cp ${DISTDIR}/UHK.Agent-${PV}-linux-x86_64.AppImage UHK.Agent.AppImage  || die
+   chmod 755 UHK.Agent.AppImage || die
    mkdir uhk-agent-bin-${PV} || die
    cd uhk-agent-bin-${PV} || die
-   cp ../../distdir/UHK.Agent-${PV}-linux-x86_64.AppImage UHK.Agent.AppImage || die
-   fperms 755 UHK.Agent.AppImage || die
-   ./UHK.Agent.AppImage --appimage-extract || die
+
+   ../UHK.Agent.AppImage --appimage-extract || die
 }
 
 src_install() {
 	insinto /usr/share
 	doins -r squashfs-root/usr/share/icons
 	exeinto /opt/uhk-agent-bin/bin
-	doexe UHK.Agent.AppImage
+	doexe ../UHK.Agent.AppImage
     make_wrapper "${PN}" "/opt/uhk-agent-bin/bin/UHK.Agent.AppImage"
 	make_desktop_entry "${PN}" "Ultimate Hacking Keyboard Configurator" "uhk-agent" "Utility;"
 }
