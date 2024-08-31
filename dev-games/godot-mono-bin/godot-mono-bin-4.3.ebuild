@@ -10,6 +10,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+QA_PREBUILT="/opt/godot/bin/godot"
+
 src_unpack() {
 	unzip ${DISTDIR}/Godot_v${PV}-stable_mono_linux_x86_64.zip
 	mv Godot_v${PV}-stable_mono_linux_x86_64 godot-mono-bin-${PV}
