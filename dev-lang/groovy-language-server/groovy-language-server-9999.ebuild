@@ -26,8 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/${P}/lib
-	doins build/libs/groovy-language-server-9999-all.jar
-	doins build/libs/groovy-language-server-9999.jar
-
+	insinto /usr/share/${PN}/lib
+	newins build/libs/groovy-language-server-9999-all.jar groovy-language-server-all.jar
+	newins build/libs/groovy-language-server-9999.jar groovy-language-server.jar
 }
