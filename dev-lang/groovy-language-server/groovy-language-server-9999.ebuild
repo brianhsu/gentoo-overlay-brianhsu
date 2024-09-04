@@ -6,8 +6,8 @@ EAPI=8
 inherit git-r3 toolchain-funcs
 
 DESCRIPTION="Groovy Language Server"
-HOMEPAGE="https://github.com/GroovyLanguageServer/groovy-language-server"
-EGIT_REPO_URI="https://github.com/GroovyLanguageServer/groovy-language-server"
+HOMEPAGE="https://github.com/brianhsu/groovy-language-server"
+EGIT_REPO_URI="https://github.com/brianhsu/groovy-language-server"
 
 LICENSE="Apache-2.0"
 SLOT="0"
