@@ -22,7 +22,7 @@ DEPEND="
 "
 
 src_compile() {
-	GRADLE_USER_HOME="./gradle" gradle build
+	GRADLE_USER_HOME="./gradle" ./gradlew build
 }
 
 src_install() {
